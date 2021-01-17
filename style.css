@@ -1,0 +1,333 @@
+/*https://fonts.google.com/specimen/Roboto+Slab?query=rob&sidebar.open=true&selection.family=Cormorant:wght@500;600|Gabriela|Roboto+Slab:wght@500
+CSS rules to specify families
+
+font-family: 'Cormorant', serif;
+font-family: 'Gabriela', serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Open Sans', sans-serif;*/
+
+body {
+	margin: 0;
+	font-family: 'Cormorant', serif;
+}
+
+*
+*:before
+#:after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	cursor: default;
+}
+
+/*===container===*/
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+/*===header===*/
+.header {
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 3px solid #BA6464;
+	padding: 35px 0 25px;
+	align-items: center;
+}
+
+.header_name {
+	font-family: 'Gabriela', serif;
+	font-size: 36px;
+	line-height: 1.1;
+	color: #690C0C;
+	transition: .5s ease;
+}
+
+.header_name:hover {
+	color: #fff;
+	cursor: default;
+}
+
+.nav {
+	display: flex;
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.nav__link:first-child {
+	margin-left: 0;
+}
+
+.nav__link {
+	position: relative;
+	margin-left: 55px;
+	color: #fff;
+	line-height: 1.1;
+	text-decoration: none;
+	
+}
+
+.nav__link:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 1.1em;
+	border-bottom: 2px solid #fff;
+	transition: width .4s ease;
+}
+
+.nav__link:hover:before {
+	width: 100%;
+}
+
+/*===intro===*/
+.intro {
+	height: 850px;
+	background: #E07272 url("img/pexels-sam-lion-5709661.jpg") no-repeat center / cover;
+}
+
+.intro__inner {
+	width: 100%;
+	max-width: 850px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 350px;
+}
+
+.intro__title {
+	font-size: 48px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 1.1;
+}
+
+.intro__subtitle {
+	font-family: 'Gabriela', serif;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.5;
+	color: #FFE2E2;
+	margin: 40px 0 30px;
+
+}
+
+/*===button===*/
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wave-btn {
+	width: 260px;
+	height: 50px;
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	transition: all .8s ease 0s;
+	position: relative;
+	padding-top: 20px;
+	overflow: hidden;
+	}
+.wave-btn:hover{
+	border-radius: 20px;
+	transition: all .8s ease .2s;
+	box-shadow: 0 0 40px #E07272;
+}
+.wave-btn:hover .wave-btn__waves{
+	top: -50px;
+}
+.wave-btn__text {
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.1;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	transition: font-size .5s ease .1s;
+}
+.wave-btn__text:hover {
+	font-size: 25px;
+}
+.wave-btn__waves {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 280px;
+	height: 280px;
+	background-color: #E07272;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+	transition: all .7s ease;
+}
+.wave-btn__waves:after,
+.wave-btn__waves:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 250%;
+	height: 250%;
+	transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+}
+
+.wave-btn__waves:before {
+	background-color: #AE2A2A;
+	border-radius: 48%;
+	animation: waves 10s infinite linear;
+}
+
+.wave-btn__waves:after {
+	background-color: #AE2A2A;
+	opacity: 0.5;
+	border-radius: 44%;
+	animation: waves 15s infinite linear;
+}
+
+/*пропишем саму анимацию*/
+@keyframes waves {
+	0%{transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);}
+	100%{transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);}
+}
+
+/*===signature===*/
+.signature {
+	position: absolute;
+	top: 800px;
+	left: 1150px;
+}
+
+.signature h2 {
+	font-family: 'Gabriela', serif;
+	font-size: 24px;
+	line-height: 1.1;
+	font-weight: 400;
+	color: #C9C2C2;
+	transition: color .3s ease;
+}
+
+.signature h2:hover {
+	color: #fff;
+	cursor: default;
+}
+
+/*===section===*/
+.blocks {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding-top: 15px;
+	width: 1170px;
+}
+
+.block:first-child{
+	
+}
+
+.block{
+	display: flex;
+	width: 315px;
+	height: 100%;
+	max-height: 400px;
+	background: #FCF2EF;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 5px;
+	transition: all .3s linear;
+	border-radius: 15px;
+}
+.block:hover{
+	background: #71BFA9;
+	width: 335px;
+}
+
+.round {
+	margin-top: 10px;
+	align-self: center;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background: #E7E1E1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background .8s ease;
+}
+
+.content-text {
+	padding: 20px 15px 0;
+	font-size: 20px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.icon {
+	color: #C17E58;
+	font-size: 53px;
+	transition: color .8s ease;	
+}
+
+.novelties h1 {
+	padding: 50px 0;
+	text-align-last: left;
+	font-size: 36px;
+	line-height: 1;
+}
+
+.novelties_blocks {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 80px;
+	width: 1160px;
+	height: 350px;
+}
+
+.nov_block {
+	width: 250px;
+	height: 330px;
+	background: #EBEBEB;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	transition: all .4s ease;
+}
+.nov_block:hover {
+	width: 270px;
+	height: 350px;
+}
+
+.nov_block h2 {
+	font-size: 24px;
+	color: #8B7171;
+	line-height: 1.2;
+}
+
+
+
+footer {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.footer_titles {
+	border-top: 3px solid #EBDEDE;
+	padding: 30px 0;
+	display: flex;
+	justify-content: space-around;
+}
