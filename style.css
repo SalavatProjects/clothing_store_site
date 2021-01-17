@@ -205,26 +205,6 @@ h1, h2, h3, h4, h5, h6 {
 	100%{transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);}
 }
 
-/*===signature===*/
-.signature {
-	position: absolute;
-	top: 800px;
-	left: 1150px;
-}
-
-.signature h2 {
-	font-family: 'Gabriela', serif;
-	font-size: 24px;
-	line-height: 1.1;
-	font-weight: 400;
-	color: #C9C2C2;
-	transition: color .3s ease;
-}
-
-.signature h2:hover {
-	color: #fff;
-	cursor: default;
-}
 
 /*===section===*/
 .blocks {
